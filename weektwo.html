@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Requirement 1</h3>
+    <label for="input1">Enter a number</label>
+    <input id="input1" name="input1" type="text" />
+    <button onclick="show()">Submit</button>
+    <div id="result1"></div>
+    <h3>Requirement 2</h3>
+    <label for="input2">Enter a number</label>
+    <input id="input2" name="input2" type="text" />
+    <button onclick="sendData()">Submit</button>
+    <div id="result2"></div>
+    <h3>Requirement 3</h3>
+    <label for="input3">Enter a number</label>
+    <input id="input3" name="input3" type="text" />
+    <input id="input4" name="input4" type="text" />
+    <button onclick="add()">Submit</button>
+    <div id="result3"></div>
+    <h3>Requirement 4</h3>
+    <label for="input5">Enter a number</label>
+    <input id="input5" name="input5" type="text" />
+    <input id="input6" name="input6" type="text" />
+    <select name="op" id="op">
+        <option value="sum">Sum</option>
+        <option value="sub">Sub</option>
+        <option value="mult">Mult</option>
+      </select>
+    <button onclick="calculate()">Submit</button>
+    <div id="result4"></div>
+
+    <script>
+        function show() {
+            const input = document.getElementById("input1").value;
+            const output = document.getElementById("result1");
+            output.innerHTML = "You entered: " + input;
+        }
+
+        function sendData() {
+            const input = document.getElementById("input2").value;
+            const output = document.getElementById("result2");
+            const number = parseInt(input);
+            if (number !== NaN) {
+                output.innerHTML = "total: " + sum(number);
+            }
+        }
+        function sum(num) {
+            let total = 0;
+            for (let i = 1; i <= num; i++) {
+                total += i;
+            }
+            return total;
+        }
+
+        function add() {
+            const input1 = document.getElementById("input3").value;
+            const input2 = document.getElementById("input4").value;
+            const output = document.getElementById("result3");
+            const num1 = parseFloat(input1);
+            const num2 = parseFloat(input2);
+
+            if ((num1 !== NaN) & (num2 !== NaN)) {
+                const total = num1 + num2;
+                output.innerHTML = "Total: " + total;
+            }
+        }
+
+        function calculate() {
+            const input1 = document.getElementById("input5").value;
+            const input2 = document.getElementById("input6").value;
+            const input3 = document.getElementById("op").value;
+            const output = document.getElementById("result4");
+            const num1 = parseFloat(input1);
+            const num2 = parseFloat(input2);
+
+            if ((num1 !== NaN) & (num2 !== NaN) & (input3 == "sum")) {
+                const total = num1 + num2;
+                output.innerHTML = "Total: " + total;
+            }
+            if ((num1 !== NaN) & (num2 !== NaN) & (input3 == "sub")) {
+                const total = num1 - num2;
+                output.innerHTML = "Total: " + total;
+            }
+            if ((num1 !== NaN) & (num2 !== NaN) & (input3 == "mult")) {
+                const total = num1 * num2;
+                output.innerHTML = "Total: " + total;
+            }
+        }
+    </script>
+</body>
+
+</html>

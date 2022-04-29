@@ -1,6 +1,6 @@
 let links = [
-    { "label": "week1", "url": "index.html" },
-    { "label": "week2", "url": "index2.html" }
+    { "label": "Week 1", "url": "index.html" },
+    { "label": "Week 2", "url": "weektwo.html" }
 ];
 
 function addItems(data) {
@@ -14,6 +14,7 @@ function addItems(data) {
 }
 
 addItems(links);
+
 
 
 
