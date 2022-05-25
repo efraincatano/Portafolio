@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+body{
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    width: 100%;
+    height: 100vh;
+}
+p.checked{
+    text-decoration: line-through;
+}
+
+.clearAll{
+    margin-left: 50px;
+    
+}
+.controls{
+
+    display: flex;
+    flex-direction: row;
+}
+.userInput{
+    margin-left: 50px;
+
+}
+#all, #active, #completed {
+    margin-left: 50px;
+}
+
+#all:hover, #active:hover, #completed:hover {
+    color: blue;
+}
+
+.taskList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.task{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.task:hover{
+    background-color: antiquewhite;
+}
