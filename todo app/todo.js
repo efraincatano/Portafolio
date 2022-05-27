@@ -1,7 +1,7 @@
 const userInput = document.querySelector(".userInput input");
 const filters = document.querySelectorAll(".filters span");
 const clearAll = document.querySelector(".clearAll");
-const taskList = document.querySelector(".taskList");
+const taskList = document.querySelector("#taskList");
 
 
 let todos = JSON.parse(localStorage.getItem("todoList"));
@@ -20,7 +20,7 @@ function showTodo(filter) {
         todos.forEach((todo, id) => {
             let completed = todo.status == "completed" ? "checked" : "";
             if(filter == todo.status || filter == "all") {
-                li += `<div class="task">
+                li += `<li id="task" class="list-group-item">
                             <label for="${id}">
                                 <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
                                 <p class="${completed}">${todo.name}</p>
@@ -28,12 +28,12 @@ function showTodo(filter) {
                             <div class="deleteBtn">
                                 <button type="button" onclick='deleteTask(${id}, "${filter}")'>Delete</button>
                             </div>
-                        </div>`;
+                        </li>`;
             }
         });
     }
     taskList.innerHTML = li || `<span>You don't have any task here</span>`;
-    let checkTask = taskList.querySelectorAll(".task");
+    let checkTask = taskList.querySelectorAll("#task");
 }
 showTodo("all");
 
