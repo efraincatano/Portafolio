@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(224, 251, 252);
+    padding: auto;
+    margin: 5%;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.headers {
+    margin-left: 35%;
+}
+h3, h4{
+    color: rgb(238, 108, 77);
+}
+#cardsbox{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 800px) {
+    img{
+        display: none;
+    }
+    .card{
+        margin: 10px;
+    }
+  }

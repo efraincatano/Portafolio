@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Curriculum</title>
+</head>
+<body>
+
+    <div class="headers">
+        <h1>Efrain Cataño</h1>
+        <h2>Software Developer</h2>
+        </div>
+    <div class="cardsbox" id="cardsbox" style="margin: 10px;">
+    <div class="card" style="width: 18rem;" id="aboutMeCard" onclick="showAboutMe()">
+        <img src="img1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">About me</p>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="skillsCard" onclick="showSkillsCard()">
+        <img src="img2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Skills</p>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="academicInformationCard" onclick="showAcademic()">
+        <img src="img3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Ademic information</p>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" id="projectsCard" onclick="showProject()">
+        <img src="img4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <p class="card-text">Projects</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="hide" id="aboutMe" name="aboutMe">
+        <h3>About me</h3>
+        <p>I am from Colombia living in Chile, I am enrolled in Brigham Young University-Idaho with a Major in 
+            Applied Technology BS with a focus on software development. Currently I work as a Web Backend 
+            Developer for a software company in Santiago, Chile called Inexoos <a href="https://cl.linkedin.com/company/grupo-inexoos?trk=similar-pages">(Linkedin)</a></p>
+    </div>
+    <div class="hide" id="skills" name="skills">
+        <h3>Skills</h3>
+        <ul>
+            <li>Web-frontend development with JavaScript, HTML, CSS</li>
+            <li>Web-backend development with PHP and Python</li>
+            <li>Mobile Applications with Java</li>
+            <li>Knowledge in relational databases and SQL</li>
+        </ul>
+    </div>
+    <div class="hide" id="academic" name="academic">
+        <h3>Ademic information</h3>
+        <ul>
+            <li>Computer Programing Certificate, Brigham Young University-Idaho, 2021</li>
+        </ul>
+    </div>
+    <div class="hide" id="projects" name="projects">
+        <h3>Projects</h3>
+        <ul class="listProjects" id="listProjects"></ul>
+    </div>
+    <div class="comments" id="comments" style="margin: 10px;">
+        <h3>Leave a comment</h3>
+        <input type="text" required placeholder="Say something..." class="form-label">
+        <h4>List of comments</h4>
+        <ul class="commentsList" id="commentsList"></ul>
+    </div>
+    <footer>
+        <h3>Contact me</h3>
+        <form class="mb-3" method="POST" action="index.php" style="width: 500px;">
+            <label for="name" class="form-label">Name:</label><br>
+            <input type="text" id="name" name="name" class="form-control" required><br>
+            <label for="email" class="form-label">Email</label><br>
+            <input type="email" id="email" name="email" class="form-control" required><br>
+            <label for="message" class="form-label">Message</label><br>
+            <textarea class="form-control" id="message" rows="3"></textarea><br>
+            <input type="submit" value="Submit" class="btn btn-primary">
+          </form>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+<script src="index.js"></script>
+</html>

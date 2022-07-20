@@ -1,0 +1,13 @@
+[ 
+{
+    "name": "Hospital management", 
+    "description": "Control panel to manage hospitals, allows you to control the admission of patients, the priority to be treated and assigns them to doctors who are available (PHP)",
+    "link": "https://github.com/efraincatano/hospital"
+},
+{
+    "name": "Automotive Technical Review",
+    "description": "Software to record the technical review of vehicles (Python)",
+    "link": "https://github.com/efraincatano/api_revision"
+
+}
+]
