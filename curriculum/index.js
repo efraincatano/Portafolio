@@ -1,11 +1,7 @@
-let links = [
-    { "label": "Week 1", "url": "index.html" },
-    { "label": "Week 2", "url": "weektwo.html" }
-];
-
 
 const ord_list = document.getElementById("listProjects");
 
+//Changing the class of each DIV to show and hide
 function showAboutMe(){
     let content = document.getElementById("aboutMe");
     content.classList.toggle("show");
@@ -26,9 +22,10 @@ function showProject(){
     content.classList.toggle("show");
 }
 
+//Bringing information from an JSON file, like and API
 function addProjects() {
     fetch('projects.json')
-        .then(result => result.json()) //Indicamos el formato en que se desea obtener la información
+        .then(result => result.json())
         .then(projectsList => {
             projectsList.forEach(project => {
                 const row = document.createElement('li');
@@ -44,6 +41,7 @@ function addProjects() {
 
 addProjects();
 
+// Adding comments to LocalStorage 
 const userInput = document.querySelector("#comments input");
 let comments = JSON.parse(localStorage.getItem("comments"));
 
@@ -62,6 +60,7 @@ userInput.addEventListener("keyup", e => {
     }
 });
 
+//Showing the list of comments  
 const commentsList = document.querySelector("#commentsList");
 let commentStorage = JSON.parse(localStorage.getItem("comments"));
 
